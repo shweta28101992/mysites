@@ -5,7 +5,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   gap: 24px;
+    border:1px solid red;
 }
+
 
 .cards > ul > li {
   border: 1px solid #dadada;
