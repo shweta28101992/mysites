@@ -132,34 +132,12 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
-  const rightContainer = document.createElement("div");
-rightContainer.className = "rightContainer";
-
-const headerTag = document.createElement("div");
-headerTag.className = "headertag";
-headerTag.textContent = "ASX:ALL";
-
-const priceSpan = document.createElement("span");
-priceSpan.textContent = "$57.56";
-
-headerTag.appendChild(priceSpan);
-rightContainer.appendChild(headerTag);
-
-document.body.appendChild(rightContainer); 
-
-  const navSections = nav.querySelector('.nav-sections');
-  if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
-      });
-    });
-  }
+  
+document.getElementById("nav").innerHTML = `
+  <div class="rightContainer">
+    <div class="headertag">ASX:ALL<span>$57.56</span></div>
+  </div>
+`;
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
