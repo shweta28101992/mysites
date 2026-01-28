@@ -132,6 +132,21 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  const rightContainer = document.createElement("div");
+rightContainer.className = "rightContainer";
+
+const headerTag = document.createElement("div");
+headerTag.className = "headertag";
+headerTag.textContent = "ASX:ALL";
+
+const priceSpan = document.createElement("span");
+priceSpan.textContent = "$57.56";
+
+headerTag.appendChild(priceSpan);
+rightContainer.appendChild(headerTag);
+
+document.body.appendChild(rightContainer); 
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
