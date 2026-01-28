@@ -9,7 +9,7 @@ header .nav-wrapper {
 .nav-sections ul li {
   display: inline-block;
 }
-.nav-sections ul li a {
+.nav-sections ul li p a {
   padding: 0;
   background-color: transparent;
   color: #000;
