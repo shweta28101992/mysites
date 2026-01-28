@@ -153,8 +153,4 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
-document.getElementById("nav").innerHTML = `
-  <div class="rightContainer">
-    <div class="headertag">ASX:ALL<span>$57.56</span></div>
-  </div>
-`;
+
