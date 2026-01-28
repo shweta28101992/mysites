@@ -133,11 +133,7 @@ export default async function decorate(block) {
   }
 
   
-document.getElementById("nav").innerHTML = `
-  <div class="rightContainer">
-    <div class="headertag">ASX:ALL<span>$57.56</span></div>
-  </div>
-`;
+
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
@@ -157,3 +153,8 @@ document.getElementById("nav").innerHTML = `
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+document.getElementById("nav").innerHTML = `
+  <div class="rightContainer">
+    <div class="headertag">ASX:ALL<span>$57.56</span></div>
+  </div>
+`;
